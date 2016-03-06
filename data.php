@@ -116,14 +116,20 @@ $data[] = array(
     "6765 MAIN STREET (inst.)",
     "http://lego.brickinstructions.com/en/lego_instructions/set/6765/MAIN_STREET",
     "6765.jpg",
-    "western",
+    "western"
 );
 
 $data[] = array(
     "6769 Legoredo",
     "http://lego.brickinstructions.com/lego_instructions/set/6769/FORT_LEGOREDO",
     "6769.jpg",
-    "western",
+    "western"
+);
+
+$data[] = array(
+    "6435 Coast Guard",
+    "http://lego.brickinstructions.com/lego_instructions/set/6435/Coast_Guard",
+    "6435.jpg"
 );
 
 
