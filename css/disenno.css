@@ -1,0 +1,117 @@
+
+
+* { margin:0; padding:0;}
+
+body { 
+	font: normal normal bold 16px/18px "Droid Sans";
+	color: #343434;
+}
+
+body, html {
+	height: 100%;
+}
+
+.wrapper {
+	width:990px;
+	margin: 0 auto;
+}
+
+#page {
+	position: relative;
+	min-height: 90vh;
+	padding-bottom: 10vh;
+}
+
+#page-header {
+	background-color: #fdca01;
+	color: #fff;
+	padding: 40px 0px 12px 0px;
+}
+
+
+#page-header h1 {
+	font: normal normal normal 48px/50px "Luckiest guy";
+	color: #333;
+}
+
+
+#page-header nav {
+	padding-top: 6px;
+}
+
+#page-header nav a {
+	color: #333;
+	text-decoration: none;
+}
+
+#page-header nav a  + a:before{
+	content: "  |  ";
+
+}
+
+#page-body {
+	background-color: #fff;
+	color: #343434;
+	padding: 10px 0px 250px 0px;
+	overflow: auto;
+
+}
+
+.kits-list {
+	clear: both;
+	overflow: visible;
+	padding-bottom: 40px;
+}
+
+.total-list {
+	clear: both;
+}
+
+
+.ficha-lego {
+	display: inline-block;
+	width: 305px;
+	height: 260px;
+	margin-right:20px;
+	padding: 32px 0px;
+	border-bottom: 1px dotted #999;
+	overflow: visible;
+}
+
+.ficha-lego h2 {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 26px;
+}
+
+
+.ficha-lego img {
+	display:block;
+	margin: 16px 0px;
+	max-width: 280px;
+	max-height: 200px;
+	background-color: #fff;
+	border: 1px solid #999;
+	padding: 8px;
+	box-shadow: 4px 4px 6px #bbb;
+}
+
+.ficha-lego img:hover {
+	position: relative;
+	z-index: 99;
+	max-width: 600px;
+	max-height: 600px;
+}
+
+
+#page-footer {
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	width: 100%;
+	min-height: 10vh;
+	background-color: #333;
+	color:#333;
+	height:60px;
+}
+
