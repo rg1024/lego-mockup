@@ -6,7 +6,8 @@ spl_autoload_register(
     function ($clase) {
         /**
          * Each class must be in a file located in /classes where every namespace is a directory.
-         * Example:   app\html must be defined in /classes/app/html.php.
+         * Example:   app\html must be defined in /classes/app/Html.php.
+         * namespace and directories are lowercase. Class file is camel case.
          */
         static $dir;
 

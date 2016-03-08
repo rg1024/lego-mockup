@@ -1,6 +1,9 @@
 <?php
 
+
 include_once "bootstrap.php";
+
+\utils\timer\Timer::initOnce();
 
 use \files\Structure as getPath;
 
@@ -15,3 +18,5 @@ $app = new \app\WebApp($kits, $request);
 $templateFile = getPath::get("templates", "index.tpl");
 $maquetador = new \html\Maquetador($templateFile);
 echo $maquetador->render($app->content());
+
+echo \utils\timer\Html::signature();
