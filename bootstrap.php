@@ -23,3 +23,8 @@ spl_autoload_register(
         return false;
     }
 );
+
+/* Init for utility class */
+\utils\timer\Timer::initOnce();
+\files\Structure::initOnce(__DIR__);
+\html\Cache::init(\files\Structure::get('cache'));

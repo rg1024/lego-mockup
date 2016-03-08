@@ -29,4 +29,9 @@ class Parameters implements \IteratorAggregate
     {
         return new \ArrayIterator($this->values);
     }
+
+    public function uri()
+    {
+        return implode("/", $this->values);
+    }
 }

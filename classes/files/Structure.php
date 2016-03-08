@@ -6,7 +6,7 @@ class Structure
 {
     private static $rootDir;
 
-    public static function init_once($dir)
+    public static function initOnce($dir)
     {
 
         if (empty(self::$rootDir)) {

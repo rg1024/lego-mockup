@@ -1,22 +1,28 @@
 <?php
 
-
 include_once "bootstrap.php";
 
-\utils\timer\Timer::initOnce();
-
-use \files\Structure as getPath;
-
-getPath::init_once(__DIR__);
-
-// GENERAR LA APP
 $request = new \app\Parameters(array("accion", "buscar", "seccion"));
+$uri = $request->uri();
+
+// try to restore the page from cache
+$uri = $request->uri();
+if (\html\Cache::check($uri)) {
+    echo \html\Cache::out($uri);
+    echo "<!-- served by cache -->";
+    exit();
+}
+
+// load the app
 $kits = include "data.php";
 $app = new \app\WebApp($kits, $request);
 
-// GENERAR LA SALIDA
-$templateFile = getPath::get("templates", "index.tpl");
+// render the app using a template
+$templateFile = \files\Structure::get("templates", "index.tpl");
 $maquetador = new \html\Maquetador($templateFile);
-echo $maquetador->render($app->content());
 
+// output
+$content = $maquetador->render($app->content());
+\html\Cache::in($uri, $content);
+echo $content;
 echo \utils\timer\Html::signature();

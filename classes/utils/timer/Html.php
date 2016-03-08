@@ -10,14 +10,14 @@ class Html
         return sprintf("<!-- generated in %.4f seconds-->", Timer::time());
     }
 
-    private static function log()
+    public static function log()
     {
         $now = microtime(true);
-        $return = "<!-- log time ";
+        $log = "\n<!-- log time ";
         foreach (Timer::events() as $event => $time) {
-            $return .= sprintf("\n%s in %.4f seconds", $events, $now - $time);
+            $log .= sprintf("\n%s in %.4f seconds", $event, $now - $time);
         }
-        return "\-->";
-        return $return;
+        $log .="\n-->";
+        return $log;
     }
 }
