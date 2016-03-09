@@ -2,8 +2,10 @@
 
 include_once "bootstrap.php";
 
-$request = new \app\Parameters(array("accion", "buscar", "seccion"));
-$cache = new \app\cacheable\Lego($request);
+$appCache = new \app\cacheable\Lego(
+    new \app\Parameters(array("accion", "buscar", "seccion")),
+    new \utils\cache\File(\files\Structure::get('cache'))
+);
 
-echo $cache->render();
+echo $appCache->render();
 echo \utils\timer\Html::signature();

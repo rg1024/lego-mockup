@@ -5,21 +5,23 @@ namespace app\cacheable;
 abstract class Cacheable
 {
     protected $request;
+    private $cache;
 
-    public function __construct(\app\Parameters $request)
+    public function __construct(\app\Parameters $request, \utils\cache\interfaces\Cache $cache)
     {
         $this->request = $request;
+        $this->cache = $cache;
     }
 
     public function render()
     {
         $uri = $this->request->uri();
-        if (\html\Cache::check($uri)) {
-            return \html\Cache::out($uri) . "<!-- served by cache -->";
+        if ($this->cache->check($uri)) {
+            return $this->cache->out($uri) . "<!-- served by cache -->";
         }
 
         $content = $this->content();
-        \html\Cache::in($uri, $content);
+        $this->cache->in($uri, $content);
         return $content;
     }
 
