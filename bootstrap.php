@@ -24,6 +24,9 @@ spl_autoload_register(
     }
 );
 
+// PHP required VERSION.
+\utils\PhpVersion::dieIfnotMatchs(5, 4);
+
 /* Init for utility class */
-\utils\timer\Timer::initOnce();
+$timer = new \utils\timer\Timer();
 \files\Structure::initOnce(__DIR__);

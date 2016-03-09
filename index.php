@@ -8,4 +8,4 @@ $appCache = new \app\cacheable\Lego(
 );
 
 echo $appCache->render();
-echo \utils\timer\Html::signature();
+echo \utils\timer\Html::signature($timer);

@@ -5,16 +5,16 @@ namespace utils\timer;
 class Html
 {
 
-    public static function signature()
+    public static function signature(Timer $timer)
     {
-        return sprintf("<!-- generated in %.4f seconds-->", Timer::time());
+        return sprintf("<!-- generated in %.4f seconds-->", $timer->time());
     }
 
-    public static function log()
+    public static function log(Timer $timer)
     {
         $now = microtime(true);
         $log = "\n<!-- log time ";
-        foreach (Timer::events() as $event => $time) {
+        foreach ($timer as $event => $time) {
             $log .= sprintf("\n%s in %.4f seconds", $event, $now - $time);
         }
         $log .="\n-->";
