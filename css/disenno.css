@@ -3,7 +3,7 @@
 * { margin:0; padding:0;}
 
 body { 
-	font: normal normal bold 16px/18px "Droid Sans";
+	font: normal normal 700 16px/18px "Droid Sans";
 	color: #343434;
 }
 
@@ -25,12 +25,13 @@ body, html {
 #page-header {
 	background-color: #fdca01;
 	color: #fff;
-	padding: 40px 0px 12px 0px;
+	padding: 22px 0px 12px 0px;
 }
 
 
 #page-header h1 {
-	font: normal normal normal 48px/50px "Luckiest guy";
+	font: normal normal normal 48px/50px 'Shadows Into Light', cursive;
+	padding-bottom: 18px;
 	color: #333;
 }
 

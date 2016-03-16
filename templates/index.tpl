@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Lego de Nora</title>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/disenno.css" type="text/css">
 </head>
 <body>
