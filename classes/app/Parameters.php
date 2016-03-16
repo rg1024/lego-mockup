@@ -1,8 +1,12 @@
 <?php
 
+/* 
+ * The app receives its parameters using http get vars
+ */
+
 namespace app;
 
-class Parameters implements \IteratorAggregate
+class Parameters implements interfaces\Parameters
 {
     private $values;
 
