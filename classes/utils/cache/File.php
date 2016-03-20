@@ -30,7 +30,7 @@ class File implements interfaces\Cache
 
     public function check($key)
     {
-        if ($this->cachedFileDirectory) {
+        if (!$this->cachedFileDirectory) {
             return false;
         }
 
@@ -49,8 +49,7 @@ class File implements interfaces\Cache
 
     public function out($request)
     {
-       
-        if ($his->cachedFileDirectory && $this->check($request)) {
+        if ($this->cachedFileDirectory && $this->check($request)) {
             $fileName = $this->fileName($request);
             return file_get_contents($fileName);
         }
